@@ -1,0 +1,309 @@
+/* Swiggy Cafe - Shared Stylesheet (Brown & Warm Skin Palette) */
+:root {
+    --espresso-dark: #2A1810;
+    --roasted-brown: #4E2F20;
+    --caramel-brown: #82563E;
+    --skin-tone: #EBD6C1;
+    --cream-bg: #FAF4ED;
+    --card-surface: #FFFDF9;
+    --text-main: #2A1810;
+    --text-soft: #684F42;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cream-bg);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background-color: var(--espresso-dark);
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 12px rgba(42, 24, 16, 0.25);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--skin-tone);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--cream-bg);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--skin-tone);
+    border-bottom: 2px solid var(--skin-tone);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--roasted-brown);
+    color: var(--cream-bg);
+    padding: 11px 24px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--espresso-dark);
+    transform: translateY(-2px);
+}
+
+/* Hero Section (Home Page) */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    padding: 65px 8%;
+    background-color: var(--skin-tone);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.9rem;
+    color: var(--espresso-dark);
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--roasted-brown);
+    margin-bottom: 26px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 4px solid var(--card-surface);
+    box-shadow: 0 10px 25px rgba(42, 24, 16, 0.18);
+}
+
+/* Common Sections */
+.section {
+    padding: 60px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.1rem;
+    color: var(--espresso-dark);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-soft);
+    max-width: 600px;
+    margin: 0 auto 42px auto;
+}
+
+/* About Box */
+.about-container {
+    background-color: var(--card-surface);
+    border: 1px solid var(--skin-tone);
+    border-radius: 12px;
+    padding: 38px;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(42, 24, 16, 0.06);
+}
+
+.about-container p {
+    font-size: 1.05rem;
+    color: var(--text-main);
+}
+
+/* Product & Menu Cards */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 28px;
+}
+
+.card {
+    background-color: var(--card-surface);
+    border: 1px solid var(--skin-tone);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(42, 24, 16, 0.07);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 22px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-top h3 {
+    font-size: 1.2rem;
+    color: var(--espresso-dark);
+}
+
+.price {
+    font-weight: 700;
+    color: var(--caramel-brown);
+    font-size: 1.05rem;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    color: var(--text-soft);
+    margin-bottom: 20px;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid var(--skin-tone);
+    height: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Page */
+.contact-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    background-color: var(--card-surface);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--skin-tone);
+}
+
+.contact-details h3 {
+    color: var(--espresso-dark);
+    margin-bottom: 14px;
+    font-size: 1.4rem;
+}
+
+.contact-details p {
+    margin-bottom: 12px;
+    color: var(--text-soft);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D5BEA8;
+    border-radius: 6px;
+    background-color: var(--cream-bg);
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--roasted-brown);
+}
+
+/* Footer */
+footer {
+    background-color: var(--espresso-dark);
+    color: var(--skin-tone);
+    text-align: center;
+    padding: 24px 8%;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 14px;
+    }
+}
